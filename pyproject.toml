@@ -3,8 +3,8 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sage-data-elliptic-curves"
-version = "0.8.1"
+name = "sagemath-data-elliptic-curves"
+version = "0.8.2"
 description = "Elliptic-curve databases for SageMath and other Python software"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,9 +27,9 @@ classifiers = [
 test = ["pytest>=8"]
 
 [project.urls]
-Homepage = "https://github.com/cxzhong/sage-data-elliptic-curves"
-Repository = "https://github.com/cxzhong/sage-data-elliptic-curves"
-Issues = "https://github.com/cxzhong/sage-data-elliptic-curves/issues"
+Homepage = "https://github.com/sagemath/data-elliptic-curves"
+Repository = "https://github.com/sagemath/data-elliptic-curves"
+Issues = "https://github.com/sagemath/data-elliptic-curves/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

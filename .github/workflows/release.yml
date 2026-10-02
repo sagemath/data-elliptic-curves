@@ -39,9 +39,9 @@ jobs:
         run: python -m twine check dist/*
       - name: Smoke-test the wheel in a clean environment
         run: |
-          python -m venv /tmp/sage-data-elliptic-curves-smoke
-          /tmp/sage-data-elliptic-curves-smoke/bin/python -m pip install --no-deps dist/*.whl
-          /tmp/sage-data-elliptic-curves-smoke/bin/python - <<'PY'
+          python -m venv /tmp/sagemath-data-elliptic-curves-smoke
+          /tmp/sagemath-data-elliptic-curves-smoke/bin/python -m pip install --no-deps dist/*.whl
+          /tmp/sagemath-data-elliptic-curves-smoke/bin/python - <<'PY'
           from sage_data_elliptic_curves import available_ranks, cremona_mini_connection
 
           assert len(available_ranks()) == 23
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/sage-data-elliptic-curves
+      url: https://pypi.org/p/sagemath-data-elliptic-curves
     permissions:
       id-token: write
 
