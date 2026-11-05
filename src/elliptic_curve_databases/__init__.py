@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.8.2"
+__version__ = "0.8.3"
 __all__ = [
     "EllipticCurveRecord",
     "available_ranks",
@@ -50,7 +50,7 @@ class EllipticCurveRecord:
 
 def data_root() -> Any:
     """Return the package's data root as an importlib resource traversable."""
-    return files("sage_data_elliptic_curves.data")
+    return files("elliptic_curve_databases.data")
 
 
 def cremona_mini_resource() -> Any:

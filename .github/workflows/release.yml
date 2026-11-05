@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.12"
+          python-version: "3.14"
           cache: pip
       - name: Check release tag
         run: |
@@ -39,10 +39,10 @@ jobs:
         run: python -m twine check dist/*
       - name: Smoke-test the wheel in a clean environment
         run: |
-          python -m venv /tmp/sagemath-data-elliptic-curves-smoke
-          /tmp/sagemath-data-elliptic-curves-smoke/bin/python -m pip install --no-deps dist/*.whl
-          /tmp/sagemath-data-elliptic-curves-smoke/bin/python - <<'PY'
-          from sage_data_elliptic_curves import available_ranks, cremona_mini_connection
+          python -m venv /tmp/elliptic-curve-databases-smoke
+          /tmp/elliptic-curve-databases-smoke/bin/python -m pip install --no-deps dist/*.whl
+          /tmp/elliptic-curve-databases-smoke/bin/python - <<'PY'
+          from elliptic_curve_databases import available_ranks, cremona_mini_connection
 
           assert len(available_ranks()) == 23
           with cremona_mini_connection() as connection:
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/sagemath-data-elliptic-curves
+      url: https://pypi.org/p/elliptic-curve-databases
     permissions:
       id-token: write
 

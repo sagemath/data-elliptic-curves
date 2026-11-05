@@ -1,4 +1,4 @@
-"""Generate the databases shipped by ``sagemath-data-elliptic-curves``.
+"""Generate the databases shipped by ``elliptic-curve-databases``.
 
 This is adapted from the generator introduced in SageMath pull request #42701.
 It intentionally uses only the Python standard library.
@@ -15,7 +15,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 SOURCES_ROOT = PROJECT_ROOT / "sources"
-DATA_ROOT = PROJECT_ROOT / "src" / "sage_data_elliptic_curves" / "data"
+DATA_ROOT = PROJECT_ROOT / "src" / "elliptic_curve_databases" / "data"
 ALLCURVES = SOURCES_ROOT / "common" / "allcurves.00000-09999"
 RANK_SOURCES = SOURCES_ROOT / "ellcurves"
 
@@ -168,7 +168,7 @@ def _compare_databases(expected: Path, actual: Path) -> None:
 
 def check() -> None:
     """Check committed resources against a fresh logical generation."""
-    with tempfile.TemporaryDirectory(prefix="sagemath-data-elliptic-curves-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="elliptic-curve-databases-") as tmp:
         generated = Path(tmp) / "data"
         generate(generated)
         _compare_databases(
