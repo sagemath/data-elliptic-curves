@@ -7,7 +7,7 @@ name = "elliptic-curve-databases"
 version = "0.8.3"
 description = "Elliptic-curve databases for SageMath and other Python software"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 license = "GPL-2.0-or-later"
 license-files = ["LICENSE", "DATA_LICENSES.md"]
 authors = [
@@ -20,6 +20,8 @@ classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Scientific/Engineering :: Mathematics",
 ]
 

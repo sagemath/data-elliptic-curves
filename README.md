@@ -21,6 +21,8 @@ installed.
 
 ## Install
 
+Requires Python 3.13 or newer.
+
 ```console
 python -m pip install elliptic-curve-databases
 ```
