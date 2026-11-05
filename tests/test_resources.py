@@ -4,7 +4,7 @@ import sqlite3
 
 import pytest
 
-from sage_data_elliptic_curves import (
+from elliptic_curve_databases import (
     EllipticCurveRecord,
     available_ranks,
     cremona_mini_connection,

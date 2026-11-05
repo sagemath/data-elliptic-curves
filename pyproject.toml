@@ -3,8 +3,8 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sagemath-data-elliptic-curves"
-version = "0.8.2"
+name = "elliptic-curve-databases"
+version = "0.8.3"
 description = "Elliptic-curve databases for SageMath and other Python software"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -39,7 +39,7 @@ include-package-data = true
 where = ["src"]
 
 [tool.setuptools.package-data]
-sage_data_elliptic_curves = [
+elliptic_curve_databases = [
   "data/cremona/*.db",
   "data/ellcurves/rank*",
 ]

@@ -4,5 +4,5 @@ include README.md
 include generate.py
 include pyproject.toml
 recursive-include sources *
-recursive-include src/sage_data_elliptic_curves/data *.db rank*
+recursive-include src/elliptic_curve_databases/data *.db rank*
 recursive-include tests *.py

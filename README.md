@@ -1,6 +1,6 @@
-# sagemath-data-elliptic-curves
+# elliptic-curve-databases
 
-`sagemath-data-elliptic-curves` packages two small, read-only elliptic-curve
+`elliptic-curve-databases` packages two small, read-only elliptic-curve
 databases historically distributed as SageMath's `elliptic_curves` package:
 
 - John Cremona's elliptic curves of conductor below 10,000, represented as a
@@ -22,15 +22,15 @@ installed.
 ## Install
 
 ```console
-python -m pip install sagemath-data-elliptic-curves
+python -m pip install elliptic-curve-databases
 ```
 
-The Python import name is `sage_data_elliptic_curves`.
+The Python import name is `elliptic_curve_databases`.
 
 ## Use
 
 ```python
-from sage_data_elliptic_curves import (
+from elliptic_curve_databases import (
     available_ranks,
     cremona_mini_connection,
     iter_rank,
@@ -86,10 +86,17 @@ After the data terms are confirmed, publishing is performed only by the
 workflow checks the generated databases, builds and validates both
 distributions, smoke-tests the wheel in a clean environment, attaches the
 artifacts to that Release, and uses PyPI Trusted Publishing through the
-protected `pypi` environment.  The Release tag must be `0.8.2` or `v0.8.2`.
+protected `pypi` environment.  The Release tag must be `0.8.3` or `v0.8.3`.
 Configure the repository, `release.yml` workflow, and `pypi` environment as a
 PyPI Trusted Publisher before publishing the first Release.
 
 For the new PyPI project, configure a pending Trusted Publisher with project
-`sagemath-data-elliptic-curves`, GitHub owner `sagemath`, repository
+`elliptic-curve-databases`, GitHub owner `sagemath`, repository
 `data-elliptic-curves`, workflow filename `release.yml`, and environment `pypi`.
+
+## Migration from the previous package
+
+This distribution replaces `sagemath-data-elliptic-curves`. Install `elliptic-curve-databases` and change
+imports from `sage_data_elliptic_curves` to `elliptic_curve_databases`. The resource helpers and
+bundled database contents are unchanged. The two distributions use separate
+import namespaces and can coexist while consumers migrate.
